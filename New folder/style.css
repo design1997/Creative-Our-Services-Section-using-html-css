@@ -1,0 +1,161 @@
+@charset "utf-8";
+
+body{
+	margin: 0px;
+	padding: 0px;
+	background-image: url(bg.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	font-family: sans-serif;
+}
+
+a{
+	text-decoration: none;
+}
+
+.Services{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.s-heading{
+	text-align: center;
+}
+
+.s-heading h2{
+	color: black;
+	font-size: 33px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	margin: 0px;
+}
+
+.s-heading p{
+	color: black;
+	font-size: 15px;
+	margin: 5px;
+	text-align: center;
+}
+
+.s-box-container{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.s-box{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	width: 300px;
+	padding: 20px 25px;
+	height: 400px;
+	box-sizing: border-box;
+	margin: 30px;
+}
+
+.s-box img{
+	height: 75px;
+}
+
+.s-box h2{
+	color: black;
+	font-weight: 600;
+	letter-spacing: 1px;
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+.s-box p{
+	color: #403E3E;
+	font-weight: 500;
+	text-align: center;
+}
+
+.s-btn{
+	width: 100px;
+	height: 30px;
+	background: linear-gradient(to right,#FF2A5C,#FF642A);
+	display: flex;
+	border-radius: 20px;
+	justify-content: center;
+	align-items: center;
+	color: black;
+	margin-top: 10px; 
+}
+
+
+.s-btn:hover{
+	background: linear-gradient(to right,#FF642A,#FF2A5C);
+	color: white;
+	transition: all ease 0.9s;
+}
+
+
+.s-box:hover{
+	box-shadow: 2px 2px 30px rgba(0,0,0,.1);
+	transition: all ease 0.07s;
+	cursor: pointer;
+}
+
+.bar{
+	width: 100px;
+	height: 1px;
+	position: absolute;
+	left: 33%;
+	top: 5%;
+	transform: translateY(-50%);
+	background-color: #FF642A;
+	border-radius: 0px 0px 1px 1px;
+	display: none;
+	animation: bar 0.4s;
+}
+
+
+.s-box:hover .bar{
+	display: block;
+}
+
+@keyframes bar{
+	0%{
+		width: 0px;
+	}
+	100%{
+		width: 100px;
+	}
+}
+
+@media(max-width: 1050px){
+	.s-box-container{
+		flex-wrap: wrap;
+	}
+
+	.Services{
+		height: auto;
+	}
+
+	.s-heading{
+		margin: 15px;
+	}
+	.s-box{
+		flex-grow: 1;
+	}
+}
+
+
+
+
+
+
+
+
+
